@@ -16,9 +16,13 @@ Jekyll插件是由ruby编写的，在Jekyll构建静态网时执行的程序。�
 思路如下
   
   1. 安装本地的[Jekyll](http://jekyllrb.com/)环境。
+  
   2. 使用 `jekyll new`命令新建一个jekyll站点目录。
+  
   3. 在本地的jekyll站点编写博客。这时可以使用jekyll插件。
+  
   4. 使用 `jekyll build`命令生成静态站点。默认的输出目录是_site/
+  
   5. 把_site/目录下的文件发布到github。因为这就是一个静态站点不需要GitHub再次利用Jekyll构建。
   
 这个过程的4、5两部可以利用脚本实现自动化。我写的脚本如下:
