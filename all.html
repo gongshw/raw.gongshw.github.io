@@ -2,12 +2,19 @@
 layout: default
 title: 文章列表
 ---
-<p>所有文章</p>
-<ul>
-	{% for post in site.posts %}
-	<li>{{ post.date | date_to_string }}
-		<a href="{{ post.url }}">{{ post.title }}</a>
-		<a href="{{ post.url }}#disqus_thread"></a>
-	</li>
-	{% endfor %}
-</ul>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">所有文章</h3>
+	</div>
+	<div class="panel-body">
+		<ul>
+			{% for post in site.posts %}
+			<li>{{ post.date | date_to_string }}
+				<a href="{{ post.url }}">{{ post.title }}</a>
+				<a href="{{ post.url }}#disqus_thread"></a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

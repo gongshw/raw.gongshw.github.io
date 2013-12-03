@@ -3,7 +3,7 @@ layout: post_default
 comments: true
 title: 高亮导航链接
 category: 代码
-tag: jQuery 高亮 导航
+tags: jQuery 高亮 导航
 ---
 这段代码总要用到,贴在这里备忘:
 
