@@ -1,0 +1,28 @@
+---
+layout: default
+title: 这里是Gongshw的学习笔记的主页
+---
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">最新文章</h3>
+	</div>
+	<div class="panel-body">
+		<ul>
+			{% for post in site.posts %}
+			<li>
+				<div>
+					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+
+					<p>{{ post.excerpt }}</p>
+					{{ post.date | date_to_string }}
+					<a href="{{ post.url }}#disqus_thread"></a>
+					<hr/>
+				</div>
+
+			</li>
+			{% endfor %}
+		</ul>
+		<a>查看更多...</a>
+	</div>
+</div>

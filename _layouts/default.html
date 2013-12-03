@@ -1,0 +1,33 @@
+{% include html_tag.html %}
+{% include head_tag.html %}
+<body>
+
+{% include header.html %}
+
+<div class="container">
+	<!-- Example row of columns -->
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2>{{ page.title }}</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-8">
+			{{ content }}
+		</div>
+		<div class="col-lg-4">
+			{% include calendar_widget.html %}
+			{% include categories.html %}
+		</div>
+	</div>
+
+	{% include footer.html %}
+</div>
+<!-- /container -->
+
+{% include footlibs.html %}
+{% include ga.html %}
+{% include disqus.html %}
+</body>
+{% include html_tag_end.html %}
