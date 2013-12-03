@@ -25,7 +25,7 @@ Jekyll插件是由ruby编写的，在Jekyll构建静态网时执行的程序。�
   
   5. 把_site/目录下的文件发布到github。因为这就是一个静态站点不需要GitHub再次利用Jekyll构建，所以在根目录下添加一个内容为空的.nojekyll文件(`touch .nojekyll`)
   
-这个过程的4、5两部可以利用脚本实现自动化。我写的脚本如下:
+这个过程的4、5两步可以利用脚本实现自动化。我写的脚本如下:
 
 {% highlight sh linenos=table %}
 #!/bin/sh
