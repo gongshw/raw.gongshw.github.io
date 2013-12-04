@@ -10,9 +10,23 @@ title: 文章列表
 	<div class="panel-body">
 		<ul>
 			{% for post in site.posts %}
-			<li>{{ post.date | date_to_string }}
-				<a href="{{ post.url }}">{{ post.title }}</a>
-				<a href="{{ post.url }}#disqus_thread"></a>
+			<li>
+				<div><h3><a href="{{ post.url }}">{{ post.title }}</a></h3></div>
+				<div>
+					<span><span class="glyphicon glyphicon-tags"></span>
+							标签:
+							{% for t in post.tags %}
+							<a href="js:;">{{t}}</a>
+							{% endfor %}</span>
+					|
+						<span>
+							<span class="glyphicon glyphicon-calendar"></span>
+							发布日期: {{ post.date | date: "%Y-%m-%d" }}</span>
+					|
+					分类: <a href="{{ site.baseurl }}categories/{{ post.category }}">{{ post.category }}</a>
+					|
+					<a href="{{ post.url }}#disqus_thread"></a>
+				</div>
 			</li>
 			{% endfor %}
 		</ul>

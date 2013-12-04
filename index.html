@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 这里是Gongshw的学习笔记的主页
+title: 编程狗窝
 ---
 
 <div class="panel panel-default">
@@ -12,17 +12,30 @@ title: 这里是Gongshw的学习笔记的主页
 			{% for post in site.posts %}
 			<li>
 				<div>
-					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+					<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
 					<p>{{ post.excerpt }}</p>
-					{{ post.date | date_to_string }}
-					<a href="{{ post.url }}#disqus_thread"></a>
+					<div>
+					<span><span class="glyphicon glyphicon-tags"></span>
+							标签:
+							{% for t in post.tags %}
+							<a href="js:;">{{t}}</a>
+							{% endfor %}</span>
+						|
+						<span>
+							<span class="glyphicon glyphicon-calendar"></span>
+							发布日期: {{ post.date | date: "%Y-%m-%d" }}</span>
+						|
+						分类: <a href="{{ site.baseurl }}categories/{{ page.category }}">{{ post.category }}</a>
+						|
+						<a href="{{ post.url }}#disqus_thread"></a>
+					</div>
 					<hr/>
 				</div>
 
 			</li>
 			{% endfor %}
 		</ul>
-		<a>查看更多...</a>
+		<a style="float: right" href="all.html">查看更多...</a>
 	</div>
 </div>

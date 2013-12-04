@@ -33,11 +33,15 @@
 						|
 						<span>
 							<span class="glyphicon glyphicon-calendar"></span>
-							发布日期: {{ page.date | date_to_string }}</span>
+							发布日期: {{ page.date | date: "%Y-%m-%d" }}</span>
 						|
 						<span>
 							<span class="glyphicon glyphicon-link"></span>
 							<a href="{{ page.url}}">本文链接</a></span>
+					</div>
+
+					<div>
+
 					</div>
 
 				</div>
@@ -49,6 +53,7 @@
 		</div>
 		<div class="col-lg-4">
 			{% include calendar_widget.html %}
+			{% include categories.html %}
 		</div>
 	</div>
 	{% include footer.html %}
