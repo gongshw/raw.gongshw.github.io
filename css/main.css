@@ -5,3 +5,11 @@
 body {
     background: #f0f0f0 url(img/grid-18px-masked.png) repeat-x fixed top;
 }
+
+p{
+	text-indent:2em
+}
+
+.highlighttable{
+	margin-left: 2em;
+}
