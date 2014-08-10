@@ -28,7 +28,7 @@
 						<span><span class="glyphicon glyphicon-tags"></span>
 							标签:
 							{% for t in page.tags %}
-							<a href="js:;">{{t}}</a>
+							<a href="{{ site.baseurl }}tag/{{t}}">{{t}}</a>
 							{% endfor %}</span>
 						|
 						<span>
