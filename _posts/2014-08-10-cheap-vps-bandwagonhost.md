@@ -3,8 +3,10 @@ layout: post_default
 comments: true
 title: $3.99一年的VPS:bandwagonhost
 category: 解决方案
-tags: java 类库
+tags: VPS bandwagonhost
 ---
+
+最近发现一家叫bandwagonhost的低端VPS服务商。看了下大家对其产品评价还不错。
 
 这家10美元/年以下的产品有:
 
