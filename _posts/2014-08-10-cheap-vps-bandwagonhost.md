@@ -1,7 +1,7 @@
 ---
 layout: post_default
 comments: true
-title: $3.99一年的VPS: bandwagonhost
+title: "$3.99一年的VPS: bandwagonhost"
 category: 解决方案
 tags: VPS bandwagonhost
 ---
