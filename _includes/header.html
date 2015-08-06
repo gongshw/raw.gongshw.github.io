@@ -4,29 +4,31 @@ your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">a
 improve your experience.</p>
 <![endif]-->
 <header class="mdl-layout__header mdl-layout__header--scroll .mdl-color--grey-100">
-<div class="mdl-layout__header-row">
-  <!-- Title -->
-  <span class="mdl-layout-title">编程狗窝</span>
-  <!-- Add spacer, to align navigation to the right -->
-  <div class="mdl-layout-spacer"></div>
-  <!-- Navigation -->
-  <nav class="mdl-navigation">
-    <a class="mdl-navigation__link" href=""></a>
-  </nav>
-</div>
+    <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title"><a id="site-title" href="{{ site.baseurl }}">编程狗窝</a></span>
+        {% if page.path != "index.html" %}
+        <div class="mdl-tooltip" for="site-title">
+            点击这里可以去这个更新得很不频繁的博客的首页.
+        </div>
+        {% endif %}
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href=""></a>
+        </nav>
+    </div>
 </header>
 <div class="mdl-layout__drawer">
-<span class="mdl-layout-title">编程狗窝</span>
-<nav class="mdl-navigation">
-  <a class="mdl-navigation__link" href="{{ site.baseurl }}">主页</a>
-  <a class="mdl-navigation__link" href="{{ site.baseurl }}all.html">所有文章</a>
-  <a class="mdl-navigation__link" href="{{ site.baseurl }}about.html">关于</a>
-</nav>
-<nav class="mdl-navigation">
-  <span class="nav-sub-title">文章分类</span>
-  {% for category in site.categories %}
-  <a class="mdl-navigation__link mdl-badge" data-badge="{{ category | last | size }}" href="{{ site.baseurl }}categories/{{ category | first }}/">{{ category | first }} ({{ category | last | size }})</a>
-  {% endfor %}
-</nav>
+    <span class="mdl-layout-title">编程狗窝</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="{{ site.baseurl }}">主页</a>
+        <a class="mdl-navigation__link" href="{{ site.baseurl }}all.html">所有文章</a>
+        <a class="mdl-navigation__link" href="{{ site.baseurl }}about.html">关于</a>
+    </nav>
+    <nav class="mdl-navigation">
+        <span class="nav-sub-title">文章分类</span> {% for category in site.categories %}
+        <a class="mdl-navigation__link mdl-badge" data-badge="{{ category | last | size }}" href="{{ site.baseurl }}categories/{{ category | first }}/">{{ category | first }} ({{ category | last | size }})</a> {% endfor %}
+    </nav>
 </div>
- 
