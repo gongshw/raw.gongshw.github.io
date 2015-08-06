@@ -1,3 +1,6 @@
+#!/bin/env ruby
+# encoding: utf-8
+
 module Jekyll
   class TagIndex < Page
     def initialize(site, base, dir, tag)
