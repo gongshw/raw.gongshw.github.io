@@ -39,3 +39,22 @@ git push;
 {% endhighlight %}
 
 我在~/raw.gongshw.github.io目录存放模板。每次构建后自动复制_site到gongshw.github.io/这个git目录并提交到github.
+
+*2015年8月7日更新*
+
+上文的脚本在mac环境下一直运行正常, 不过在linux下cp命令常常被alias到cp -i,可能需要先unalias再执行脚本. 我最新使用的脚本如下:
+
+{% highlight sh linenos=table %}
+#!/bin/sh
+cd ~/raw.gongshw.github.io; 
+jekyll build || error_exit "$LINENO: jekyll build failed";
+git add .;
+git commit -am "Latest build: ${1}";
+git push;
+rm -rf ../gongshw.github.io/*;
+cp -r _site/* ../gongshw.github.io/;
+cd ../gongshw.github.io/;
+git add .;
+git commit -am "Latest build: ${1}";
+git push;
+{% endhighlight %}
