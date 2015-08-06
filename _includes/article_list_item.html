@@ -1,0 +1,22 @@
+<div class="mdl-card mdl-shadow--2dp my-card-wide">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        {{ post.excerpt }}
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <div>
+            <span><i class="fa fa-tags"></i> {% for t in post.tags %}
+            <a href="{{ site.baseurl }}tag/{{t}}">{{t}}</a> {% endfor %}</span> |
+            <span>
+				<i class="fa fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}</span> | 分类: <a href="{{ site.baseurl }}categories/{{ post.category }}">{{ post.category }}</a>
+            <a href="{{ post.url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pull-right">阅读</a>
+        </div>
+    </div>
+    <div class="mdl-card__menu hidden">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+            <i class="material-icons">share</i>
+        </button>
+    </div>
+</div>

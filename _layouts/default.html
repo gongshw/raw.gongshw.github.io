@@ -1,33 +1,21 @@
 {% include html_tag.html %}
 {% include head_tag.html %}
 <body>
-
-{% include header.html %}
-
-<div class="container">
-	<!-- Example row of columns -->
-
-	<div class="row">
-		<div class="col-lg-12">
-			<h2>{{ page.title }}</h2>
+<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
+	{% include header.html %}
+	<main class="mdl-layout__content">
+		<div class="demo-grid-1 mdl-grid">
+  			<div class="mdl-cell mdl-cell--3-col">
+  			</div>
+  			<div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-phone">
+				{{ content }}
+  			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-8">
-			{{ content }}
-		</div>
-		<div class="col-lg-4">
-			{% include calendar_widget.html %}
-			{% include categories.html %}
-			{% include tag_cloud_widget.html %}
-			{% include links_widget.html %}
-		</div>
-	</div>
+		{% include footer.html %}
+	</main>
+	<!-- /container -->
 
-	{% include footer.html %}
+	{% include footlibs.html %}
 </div>
-<!-- /container -->
-
-{% include footlibs.html %}
 </body>
 {% include html_tag_end.html %}

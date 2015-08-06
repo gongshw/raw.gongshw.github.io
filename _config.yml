@@ -1,4 +1,4 @@
 baseurl:  /
-pygments: true
+highlighter: pygments
 exclude: [build_blog.sh]
 url: http://blog.gongshw.com

@@ -1,67 +1,36 @@
 {% include html_tag.html %}
 {% include head_tag.html %}
+
 <body xmlns="http://www.w3.org/1999/html">
+    <div class="mdl-layout mdl-js-layout">
+        {% include header.html %}
+        <div class="post-ribbon"></div>
+        <main class="mdl-layout__content post-main">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                <div class="post-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                    <div class="post-crumb">
+                        <a href="{{ site.baseurl }}">首页</a> &gt;
+                        <a href="{{ site.baseurl }}categories/{{ page.category }}">{{ page.category }}</a> &gt;
+                        <a href="{{ page.url}}">{{ page.title }}</a>
+                    </div>
+                    <h2>{{ page.title }}</h2>
 
-{% include header.html %}
+                    <div>{{ content }}</div>
 
-<div class="container">
-	<!-- Example row of columns -->
-	<div class="row">
-		<div class="col-lg-12">
-			<h2>{{ page.title }}</h2>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-8">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						<a href="{{ site.baseurl }}">首页</a>&gt;
-						<a href="{{ site.baseurl }}categories/{{ page.category }}">分类: {{ page.category }}</a>
-					</h3>
-				</div>
-				<div class="panel-body">
-					<div>{{ content }}</div>
-					<hr>
-					<div>
+                    <div class="pull-right">
+                        <span><i class="fa fa-tags"></i> {% for t in page.tags %}
+                        <a href="{{ site.baseurl }}tag/{{t}}">{{t}}</a> {% endfor %}</span>
+                        |
+                        <span><i class="fa fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }}</span>
+                    </div>
 
-						<span><span class="glyphicon glyphicon-tags"></span>
-							标签:
-							{% for t in page.tags %}
-							<a href="{{ site.baseurl }}tag/{{t}}">{{t}}</a>
-							{% endfor %}</span>
-						|
-						<span>
-							<span class="glyphicon glyphicon-calendar"></span>
-							发布日期: {{ page.date | date: "%Y-%m-%d" }}</span>
-						|
-						<span>
-							<span class="glyphicon glyphicon-link"></span>
-							<a href="{{ page.url}}">本文链接</a></span>
-					</div>
-
-					<div>
-
-					</div>
-
-				</div>
-			</div>
-
-
-			{% include duoshuo_comment.html %}
-
-		</div>
-		<div class="col-lg-4">
-			{% include calendar_widget.html %}
-			{% include categories.html %}
-		</div>
-	</div>
-	{% include footer.html %}
-
-</div>
-<!-- /container -->
-
-{% include footlibs.html %}
-
+                    {% include duoshuo_comment.html %}
+                </div>
+            </div>
+        </main>
+        <!-- /container -->
+        {% include footer.html %} {% include footlibs.html %}
+    </div>
 </body>
 {% include html_tag_end.html %}
