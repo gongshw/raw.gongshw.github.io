@@ -133,3 +133,7 @@ blockquote:after {
 .article-meta{
     margin-top: 15px;
 }
+
+#ds-thread #ds-reset .ds-powered-by {
+    display: none;
+}
