@@ -77,13 +77,13 @@ em {
     font-size: 32px;
 }
 
-.center-text a {
+footer .center-text a {
     padding: 6px;
     color: #9E9E9E;
     text-decoration: inherit;
 }
 
-.center-text a:hover {
+footer .center-text a:hover {
     color: white;
     text-decoration: inherit;
     font-style: bold;
@@ -98,17 +98,22 @@ em {
     line-height: 36px;
 }
 
-h2 a{
+.my-card-wide.mdl-card {
+    min-height: 160px;
+}
+
+h2 a {
     color: black;
     text-decoration: inherit;
 }
 
-.grey-text-container, .grey-text-container a{
+.grey-text-container,
+.grey-text-container a {
     color: #9E9E9E !important;
     text-decoration: inherit;
 }
 
-#site-title{
+#site-title {
     color: white;
     text-decoration: inherit;
 }
