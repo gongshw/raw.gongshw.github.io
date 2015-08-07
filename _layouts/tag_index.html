@@ -3,7 +3,7 @@ layout: default
 title: 标签
 ---
 
-<h3 class="panel-title">有标签<em>{{ page.tag }}</em>的文章</h3>
+<h3 class="panel-title">有标签“<em>{{ page.tag }}</em>”的文章</h3>
 {% for post in site.posts %}
 	{% for tag in post.tags %}
 		{% if tag == page.tag %}

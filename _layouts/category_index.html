@@ -3,7 +3,7 @@ layout: default
 title: 目录
 ---
 
-<h3 class="panel-title">分类<em>{{page.category}}</em>下的文章</h3>
+<h3 class="panel-title">分类“<em>{{page.category}}</em>”下的文章</h3>
 {% for post in site.categories.[page.category] %}
 {% include article_list_item.html %}
 {% endfor %}
