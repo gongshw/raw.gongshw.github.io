@@ -129,11 +129,25 @@ blockquote:after {
     content: none !important;
 }
 
-
-.article-meta{
+.article-meta {
     margin-top: 15px;
 }
 
 #ds-thread #ds-reset .ds-powered-by {
     display: none;
+}
+
+#search_text{
+    width: 0px;
+    display: none;
+}
+
+
+#search_text[autocomplete]{
+    display: block;
+    padding: 7px 11px 7px 20px;
+}
+
+#search_text[autocomplete]:hover{
+    cursor: pointer;
 }
