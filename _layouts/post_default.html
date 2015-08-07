@@ -14,9 +14,9 @@
                         <a href="{{ site.baseurl }}categories/{{ page.category }}">{{ page.category }}</a> &gt;
                         <a href="{{ page.url}}">{{ page.title }}</a>
                     </div>
-                    <h2>{{ page.title }}</h2>
+                    <h2 data-swiftype-name="title" data-swiftype-type="string">{{ page.title }}</h2>
 
-                    <div>{{ content }}</div>
+                    <div data-swiftype-name="body" data-swiftype-type="text">{{ content }}</div>
 
                     <div class="pull-right grey-text-container article-meta">
                         <span><i class="fa fa-tags"></i> {% for t in page.tags %}

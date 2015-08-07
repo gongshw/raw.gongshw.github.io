@@ -5,6 +5,14 @@
 	<meta name="description" content="编程狗窝 一个程序员的博客 ">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- meta tags for swiftype search engine-->
+	<meta class="swiftype" name="title" data-type="string" content="{{ page.title }}" />
+	{% if page.tags %}
+	{% for t in page.tags %}
+	<meta class="swiftype" name="tags" data-type="string" content="{{ t }}" />	
+	{% endfor %}
+	{% endif %}
+
 	<link rel="stylesheet" href="{{ site.baseurl }}css/material.min.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}css/main.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}css/syntax.css">
