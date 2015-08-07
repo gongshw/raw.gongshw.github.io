@@ -12,7 +12,7 @@ tags: java url 编码 浏览器 http 中文
 
  > The characters ";","/", "?", ":", "@", "=" and "&" are the characters which may be reserved for special meaning ... only alphanumerics, the special characters "$-_.+!*'(),", and reserved characters used for their reserved purposes may be used unencoded within a URL.
 
-即只有字母数字、部分特殊字符和保留字可以不经编码出现在URL中。而中文字符,是必须要经过编码才能出现在URL中的。但是问题在于RFC 1738没有规定具体的编码方法, 这个编码方法取决于浏览器和http服务器的约定, 不同的浏览器对于不同来源的url中不同位置的中文字符可能采取不同的编码方法。这篇[博客](http://www.cnblogs.com/kenshinobiy/p/4377365.html)对此进行了简略的分析。
+即只有字母数字、部分特殊字符和保留字可以不经编码出现在URL中。而中文字符,是必须要经过编码才能出现在URL中的。但是问题在于RFC 1738没有规定具体的编码方法, 这个编码方法取决于浏览器和http服务器的约定, 不同的浏览器对于不同来源的url中不同位置的中文字符可能采取不同的编码方法。这篇[博客](http://www.ruanyifeng.com/blog/2010/02/url_encoding.html)对此进行了简略的分析。
 
 但实际上主流浏览器在处理出现在超链接中的含有中文的URL的方法是近乎一致的, 对于下面这个URL的跳转:
 

@@ -7,10 +7,11 @@
     </div>
     <div class="mdl-card__actions mdl-card--border grey-text-container">
         <div>
-            <span><i class="fa fa-tags"></i> {% for t in post.tags %}
-            <a href="{{ site.baseurl }}tag/{{t}}">{{t}}</a> {% endfor %}</span> |
-            <span>
-				<i class="fa fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}</span> | 分类: <a href="{{ site.baseurl }}categories/{{ post.category }}">{{ post.category }}</a>
+            <span><i class="fa fa-tags" title="标签"></i> {% for t in post.tags %}
+                <a href="{{ site.baseurl }}tag/{{t}}">{{t}}</a> {% endfor %}
+            </span> |
+            <span> <i class="fa fa-calendar" title="发布时间"></i> {{ post.date | date: "%Y-%m-%d" }}</span> |
+            <span><i class="fa fa-book" title="分类"></i> <a href="{{ site.baseurl }}categories/{{ post.category }}">{{ post.category }}</a></span>
             <a href="{{ post.url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pull-right">阅读</a>
         </div>
     </div>
