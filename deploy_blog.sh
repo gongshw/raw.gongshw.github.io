@@ -8,9 +8,10 @@ jekyll build || error_exit "$LINENO: jekyll build failed";
 git add .;
 git commit -am "${1}";
 git push;
-rm -rf ../gongshw.github.io/*;
-cp -r _site/* ../gongshw.github.io/;
 cd ../gongshw.github.io/;
+git pull
+rm -rf ./*;
+cp -r ../raw.gongshw.github.io/_site .;
 git add .;
 git commit -am "${1}";
 git push;
