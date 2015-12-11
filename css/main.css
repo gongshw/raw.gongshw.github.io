@@ -17,6 +17,12 @@ em {
 
 .highlighttable {
     margin-left: 2em;
+    margin-bottom: 1em;
+    width: calc(100% - 2em);
+}
+
+.highlight pre {
+    margin: 2px 0px 2px;
 }
 
 .layout-transparent {
@@ -102,7 +108,19 @@ footer .center-text a:hover {
     min-height: 160px;
 }
 
-h2 a {
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h1 a {
     color: black;
     text-decoration: inherit;
 }
@@ -137,17 +155,16 @@ blockquote:after {
     display: none;
 }
 
-#search_text{
+#search_text {
     width: 0px;
     display: none;
 }
 
-
-#search_text[autocomplete]{
+#search_text[autocomplete] {
     display: block;
     padding: 7px 11px 7px 20px;
 }
 
-#search_text[autocomplete]:hover{
+#search_text[autocomplete]:hover {
     cursor: pointer;
 }
