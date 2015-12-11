@@ -42,6 +42,7 @@ Unsafe unsafe = (Unsafe) f.get(null);
 Unsafe类中有超过100个方法, 大致有如下几类:
 
   - 获取运行时内存信息
+    - addressSize
   - 操作对象
   - 操作类
   - 操作数组
