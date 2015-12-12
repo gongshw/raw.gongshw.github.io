@@ -2,8 +2,8 @@
 layout: post_default
 comments: true
 title: 解决OS X El Capitan下Terminal启动慢的问题
-category: 技术
-tags: java url 编码 浏览器 http 中文
+category: 工具
+tags: "OS X" "El Capitan" Terminal Shell
 ---
 
 升级最新版的OS X El Capitan有一段时间了，总体来说与Yosemite区别不大。不过升级之后系统自带的Terminal启动极慢(每次启动大约要10秒左右)。这显然是不能接受的.
