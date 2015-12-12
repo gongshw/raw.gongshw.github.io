@@ -60,7 +60,6 @@ em {
 } 
 
 .post-content p code {
-	white-space: pre;
 	border: 1px solid #eeeed2;
     background-color: #fcfcf7;
 	border-radius: 2px;

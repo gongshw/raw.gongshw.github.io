@@ -4,7 +4,7 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 cd ~/raw.gongshw.github.io; 
-jekyll build || error_exit "$LINENO: jekyll build failed";
+jekyll _2.5.3_ build || error_exit "$LINENO: jekyll build failed";
 git add .;
 git commit -am "${1}";
 git push;
