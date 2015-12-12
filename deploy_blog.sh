@@ -13,6 +13,6 @@ git pull
 rm -rf ./*;
 cp -r ../raw.gongshw.github.io/_site/* .;
 git add .;
-git commit -am "${1}";
+git commit -am "[auto sync] ${1}";
 git push;
 
