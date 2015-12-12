@@ -94,6 +94,9 @@ em {
     font-size: 32px;
 }
 
+#tags a{
+    margin-left: 0.5em;
+}
 footer .center-text a {
     padding: 6px;
     color: #9E9E9E;
