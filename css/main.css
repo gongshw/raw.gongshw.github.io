@@ -46,13 +46,14 @@ em {
 }
 
 .post-main {
-    margin-top: -35vh;
+    margin-top: -40vh;
 }
 
 .post-content {
     border-radius: 2px;
     padding: 80px 56px;
     margin-bottom: 80px;
+    margin-top: 10vh
 }
 
 .post-content img {
