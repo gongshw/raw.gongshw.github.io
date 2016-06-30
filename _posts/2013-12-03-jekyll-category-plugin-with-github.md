@@ -58,3 +58,28 @@ git add .;
 git commit -am "Latest build: ${1}";
 git push;
 {% endhighlight %}
+
+*2016年6月30日更新*
+
+jekyll升级到3.0之后出现了大量的不兼容，最新的脚本指定了jekyll的版本:
+
+{% highlight sh linenos=table %}
+#!/bin/sh
+if [ $# -eq 0 ]; then
+    echo "git need a commit message!"
+    exit 1
+fi
+cd ~/raw.gongshw.github.io;
+jekyll _2.5.3_ build || error_exit "$LINENO: jekyll build failed";
+git add .;
+git commit -am "${1}";
+git push;
+cd ~/gongshw.github.io/;
+git pull
+rm -rf ./*;
+cp -r ~/raw.gongshw.github.io/_site/* .;
+git add .;
+git commit -am "[auto sync] ${1}";
+git push;
+
+{% endhighlight %}
