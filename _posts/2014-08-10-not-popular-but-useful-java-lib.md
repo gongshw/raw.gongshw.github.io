@@ -3,7 +3,7 @@ layout: post_default
 comments: true
 title: 一些冷门但是实用的java类库
 category: 代码
-tags: java 类库
+tags: Java 类库
 ---
 题目中的“冷门”是严格定义的: 冷门是指该项目的主要版本在maven中心仓库被其他项目依赖的次数不超过10次。
 

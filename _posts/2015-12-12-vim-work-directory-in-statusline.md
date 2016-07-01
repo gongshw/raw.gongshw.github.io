@@ -1,10 +1,10 @@
 ---
 layout: post_default
 comments: true
-title: 在vim状态行显示当前目录 
+title: 在Vim状态行显示当前目录 
 category: 工具
 tags: 
-  - vim
+  - Vim
 ---
 
 Vim的使用者都知道使用`set statusline`来自定义Vim的状态行,例如`set statusline=[%f]%y%r%m%*%=[%l/%L:%c,%p%%]`,其中标识符`%f`代表当前活跃文件的文件名。

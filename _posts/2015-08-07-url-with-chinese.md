@@ -3,7 +3,7 @@ layout: post_default
 comments: true
 title: 一个含有中文的url的编码问题
 category: 技术
-tags: java url 编码 浏览器 http 中文
+tags: Java URL 编码 浏览器 HTTP 中文
 ---
 
 最近碰到一个需要把含有中文的url进行编码的问题。这个问题看似简单，但是查阅了相关资料之后发现也是有点坑的。
