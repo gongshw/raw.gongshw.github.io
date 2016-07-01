@@ -235,10 +235,6 @@ class Example<T> {
             return this;
         }
 
-        @java.lang.Override public String toString() {
-            return "ExampleBuilder(foo = " + foo + ", bar = " + bar + ")";
-        }
-
         public Example build() {
             return new Example(foo, bar);
         }
@@ -263,7 +259,7 @@ public void utf8ToString(byte[]bytes){
 
 受够了Java的冗长的类型声明？@val标注可以帮你完成类型推断（仅仅对局部变量）！
 
-使用"val"作为局部变量的类型声明, lombok将会根据初始化该变量的表达式推断实际的类型。例如`val x = 10.0;`将会被推断为double类型，而`val y = new ArrayList<String>();`将会被推断为ArrayList<String>。
+使用"val"作为局部变量的类型声明, lombok将会根据初始化该变量的表达式推断实际的类型。例如`val x = 10.0;`将会被推断为`double`类型，而`val y = new ArrayList<String>();`将会被推断为`ArrayList<String>`。
 
 @val是lombok中唯一改变了Java语法结构的标注，个人认为需要谨慎使用。
 
@@ -271,7 +267,7 @@ public void utf8ToString(byte[]bytes){
 
 这些标注用于为被标注的类生成一个log对象用于日志，每个标注对应了一种常用的日志库。
 
-例如@Slf4j对应了org.slf4j.Logger，
+例如@Slf4j对应了`org.slf4j.Logger`，
 
 {% highlight java linenos=table %}
 @Slf4j
@@ -282,20 +278,23 @@ public void utf8ToString(byte[]bytes){
 等价于：
 
 {% highlight java linenos=table %}
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class LogExample {
-    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(LogExample.class);
+    private static final Logger log = LoggerFactory.getLogger(LogExample.class);
 }
 {% endhighlight %}
 
 *IDE支持*
 
-主流的java IDE（IDEA、eclipse）都有插件支持lombok，避免IDE的一些错误提示。
+主流的Java IDE（IDEA、eclipse）都有插件支持lombok，避免IDE的一些错误提示。
 
 *那么，代价是什么呢？*
 
 lombok极大地减少了项目组“模板代码”的量，让开发者可以专注于业务逻辑，但代价是破坏了字节码和源代码的对应关系，可能会为调试和发布带来一些（极少的）不便。
 
-delombok工具就是为了解决这个问题，用于生产处理过的等价java源代码，关于delombok的更多信息，见[官方文档](https://projectlombok.org/features/delombok.html)
+delombok工具就是为了解决这个问题，用于生产处理过的等价Java源代码，关于delombok的更多信息，见[官方文档](https://projectlombok.org/features/delombok.html)
 
 *参考*
 
