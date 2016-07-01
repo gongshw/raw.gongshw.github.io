@@ -1,8 +1,8 @@
 ---
 layout: post_default
 comments: true
-category: java
-tags: java
+category: Java
+tags: Java
 title: "谁说java没有奇技淫巧之sun.misc.Unsafe"
 ---
 
