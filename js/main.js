@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
     var str = location.href.toLowerCase();
     $(".nav li a").each(function() {
         var link = this.href.toLowerCase();
@@ -26,4 +26,6 @@ $(document).ready(function() {
             padding: "7px 11px 7px 20px"
         })
     });
+
+    $( ".highlighttable" ).animate({opacity:1}).wrap("<div class='highlighttable-wrap'></div>");
 });

@@ -3,7 +3,7 @@ layout: post_default
 comments: true
 category: java
 tags: java
-title: "java黑科技: sun.misc.Unsafe"
+title: "谁说java没有奇技淫巧之sun.misc.Unsafe"
 ---
 
 Java是安全性极高的语言，设计上不允许程序员直接操作内存来避免一些错误。但是JRE中有一个特别的类sun.misc.Unsafe为程序员提供了访问和操作内存结构的接口，可以帮助程序员突破一些语言层面的限制实现某些黑科技。本文内容主要翻译自Mykhailo Kozik的[博客](http://mishadoff.com/blog/java-magic-part-4-sun-dot-misc-dot-unsafe/ "Java Magic. Part 4: sun.misc.Unsafe")。
