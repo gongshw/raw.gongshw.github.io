@@ -12,9 +12,9 @@ em {
 }
 
 .highlighttable-wrap {
-    margin-left: 2em;
+    /* margin-left: 2em; */
     margin-bottom: 1em;
-    width: calc(100% - 2em);
+    width: calc(100%);
     background: #ffffff;
     background-color: #f5f5f5;
     border: 1px solid #ccc;
@@ -30,6 +30,7 @@ em {
 
 .highlight pre {
     margin: 2px 0px 2px;
+    font-size: 12px;
 }
 
 .layout-transparent {
