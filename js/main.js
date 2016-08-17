@@ -27,5 +27,15 @@ $(function() {
         })
     });
 
-    $( ".highlighttable" ).animate({opacity:1}).wrap("<div class='highlighttable-wrap'></div>");
+    $(".highlighttable" ).animate({opacity:1}).wrap("<div class='highlighttable-wrap'></div>");
+
+	if(true){
+		var _appendChild = Node.prototype.appendChild;
+		Node.prototype.appendChild = function(){
+			$(arguments[0]).find("img").each(function(){
+				this.src = this.src.replace(/http:\/\/(.*)/,"https://lighthouse.gongshw.com/proxy/http/$1")
+			});
+			return _appendChild.apply(this, arguments)
+		}
+	}
 });
